@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+  version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="cash" transaction-type="RESOURCE_LOCAL">
+    <class>ch.npl.cash.domain.UserMoney</class>
+    <class>ch.npl.cash.domain.Transaction</class>
+    <class>ch.npl.cash.domain.Ordering</class>
+    <class>ch.npl.cash.domain.OrderingPosition</class>
+    <class>ch.npl.cash.domain.Article</class>
+    <properties>
+    
+      <!-- Produktiveinsatz
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/cash" />
+      <property name="javax.persistence.jdbc.user" value="****" />
+      <property name="javax.persistence.jdbc.password" value="****" />
+      -->
+ 
+ 	  <!-- für schnelle Tests -->
+ 	  <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+      <property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:" />
+
+      <property name="eclipselink.query-results-cache" value="false"/>
+      <property name="javax.persistence.lock.timeout" value="1000"/>
+	  
+      <!-- EclipseLink should create the database schema automatically -->
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />
+      <!--<property name="eclipselink.ddl-generation.output-mode" value="sql-script" />-->
+      <property name="eclipselink.ddl-generation.output-mode" value="both" />
+      
+    </properties>
+  </persistence-unit>
+</persistence>
