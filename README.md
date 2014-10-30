@@ -1,6 +1,6 @@
 # noprobLAN Cashless (npl-cash)
 
-We use this tool at noprobLAN for managing the badges of the visitors/users. There's one central database to which the users balances and orders are synchronized (_MySQL_, _JPA_).
+We use this tool at noprobLAN for managing the badges of the visitors/users. There's one central database to which the users balances and orders are synchronized (_MySQL_, _JPA_). The tool has to be configured by [jpa xml](https://github.com/noproblan/npl-cash/blob/master/src/META-INF/persistence.xml) or by code.
 
 ## Badge & Money
 The visitors of the event receive a badge containing an RFID which is allocated to a registered user in this tool. At the noprobLAN event theses registrations are synched directly with the noprobLAN homepage. Is also possible to use a CSV or a textfile (_CsvUserProvider_ or _TextfileUserProvider_).
