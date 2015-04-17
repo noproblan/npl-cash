@@ -15,7 +15,7 @@ The staff in the kitchen can create new available products which then can be bou
 ![][kitchen]
 
 ## Bar
-At the last tab users can order products. The IDs of the product have to be typed in followed every time by enter. If you type in a users RFID the list of product is ordere.
+At the last tab users can order products. The IDs of the product have to be typed in followed every time by enter. If you type in a users RFID the list of product is ordered. In this example the RFIDs have been prefixed with a *G* by the scanner.
 
 ![][bar]
 
